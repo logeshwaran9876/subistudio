@@ -1,0 +1,134 @@
+/* Container for the entire slideshow */
+.wedding-slider-container {
+    position: relative;
+    overflow: hidden; /* Prevent slides from overflowing */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  }
+  
+  /* Style for the individual slide items */
+  .wedding-slide-item {
+    position: relative;
+  }
+  
+  /* Style for the image within the slide */
+  .wedding-slider-image {
+    width: 100%;
+    display: block; /* Remove extra space below image */
+    object-fit: cover; /* Ensure image covers the container without distortion */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 700px; /* Optional: Set a maximum height */
+  }
+  
+  /* Overlay for visual interest (can be used for subtle gradients or patterns) */
+  .wedding-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Subtle dark overlay */
+    /* Optional: Add a gradient for a softer look */
+    /* background: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0) 100%); */
+  }
+  
+  /* Style for the dots navigation */
+  .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex !important; /* Override Slick's default display */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .slick-dots li {
+    margin: 0 8px;
+  }
+  
+  .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #ccc; /* Inactive dot color */
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slick-dots li.slick-active button {
+    background: #e91e63; /* Active dot color (a vibrant pink) */
+    opacity: 1;
+  }
+  
+  .slick-dots li button:hover,
+  .slick-dots li button:focus {
+    background: #f06292; /* Slightly lighter pink on hover/focus */
+  }
+  
+  /* Optional: Style for the arrows (if you choose to enable them in settings) */
+  /* .slick-prev, */
+  /* .slick-next { */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  /* z-index: 1; */
+  /* border: none; */
+  /* background: rgba(0, 0, 0, 0.3); */
+  /* color: white; */
+  /* font-size: 20px; */
+  /* padding: 10px; */
+  /* cursor: pointer; */
+  /* transition: background-color 0.3s ease; */
+  /* } */
+  
+  /* .slick-prev { */
+  /* left: 10px; */
+  /* } */
+  
+  /* .slick-next { */
+  /* right: 10px; */
+  /* } */
+  
+  /* .slick-prev:hover, */
+  /* .slick-next:hover { */
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* } */
+  
+  /* Responsive adjustments for smaller screens (matching your component's breakpoints) */
+  @media (max-width: 800px) {
+    .slick-dots {
+      bottom: 5px;
+    }
+  
+    .slick-dots li {
+      margin: 0 6px;
+    }
+  
+    .slick-dots li button {
+      width: 10px;
+      height: 10px;
+      padding: 4px;
+    }
+  
+    .wedding-slider-image {
+      max-height: 500px; /* Adjust max height for smaller screens */
+    }
+  }
+  
+  @media (min-width: 800x) and (max-width: 1024px) {
+    .wedding-slider-image {
+      max-height: 600px; /* Adjust max height for tablets */
+    }
+  }
+
+  
