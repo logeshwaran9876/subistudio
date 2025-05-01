@@ -20,6 +20,8 @@ import Footer from "./components/footer";
 import InstagramSection from "./components/follow";
 import ContactPage from "./components/contect";
 import Portfolio from "./components/portfolio";
+import InsertDecoratorPage from "./components/Create_Product.jsx";
+
 import {
   ImageSlideshow,
   Testimonials1,
@@ -38,12 +40,7 @@ function App() {
           path="/"
           element={
             <>
-              <HeroSection />
-              <MediaCard />
-              <ActionAreaCard />
-              <ImageCarousel />
-              <ImageCarousel1 />
-              <InstagramSection />
+              <HomePage/>
             </>
           }
         />
@@ -60,10 +57,10 @@ function App() {
             </>
           }
         />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/contact-us" element={<ContactPage />} />
 
         <Route
-          path="/aboutus"
+          path="/about-us"
           element={
             <>
               <HeroSection1 />
@@ -73,19 +70,20 @@ function App() {
         />
 
         <Route
-          path="/services"
+          path="/our-services"
           element={
             <>
               <ImageSlideshow />
               <ServicesSection />
-              <Testimonials />
+           
               <Awards />
-              <Footer2 />
+              
             </>
           }
         />
-        <Route path="/Portfolio" element={<Portfolio />} />
+        <Route path="/gallery" element={<><Portfolio />  <Testimonials /></>} />
         <Route path="/our-story" element={<><ImageSlideshow /><OurStoryPage /></>} />
+        <Route path="/create" element={<InsertDecoratorPage/>} />
       </Routes>
       <Footer />
     </Router>
